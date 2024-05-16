@@ -21,7 +21,7 @@
     z-index: 99;
 }
 
-.small-text{
+.small-text {
     font-size: x-large;
 }
 
@@ -95,13 +95,13 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-dark .navbar-nav .nav-link  {
+    .navbar-dark .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
 }
 
-#header-name{
+#header-name {
     text-align: center;
     font-size: 35px;
 }
@@ -133,7 +133,7 @@
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -152,7 +152,7 @@
     background: rgba(15, 23, 43, .7);
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -162,9 +162,87 @@
     z-index: 1;
 }
 
-.sponsor-img{
-    border-radius: 50%;
+.sponsor-wrappler {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
 }
+
+.sponsor-img {
+    color: white;
+    height: 100px;
+    width: 100px;
+    background-color: var(--dark);
+    padding: 1rem;
+    border-radius: 30%;
+}
+
+@media only screen and (max-width: 480px) {
+    .sponsor-wrappler {
+        overflow: scroll;
+    }
+
+    .sponsor-wrappler div {
+        margin: 15px;
+    }
+}
+
+
+.title-services {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/*** Valores da Empresa ***/
+
+
+.values {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    padding: 32px;
+    margin: 60px auto;
+    border: 1px solid #eee;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.values ol {
+    padding-left: 50px;
+    list-style-type: disc;
+}
+
+.values ol li {
+    color: #4F4F4F;
+    padding-left: 16px;
+    margin-top: 24px;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.values ol li:before {
+    content: "";
+    display: block;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: -46px;
+}
+
+.values li strong {
+    color: #292929;
+}
+
+.values ol.alternating-colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
 
 
 /*** Section Title ***/
